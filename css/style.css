@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 一般字体都设置在body下面 */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(116, 213, 111, 0.8),
+      rgba(40, 180, 131, 0.8)
+    ),
+    url(../img/hero.jpg);
+  /* cover 保证填充完容器 */
+  /* container 尽可能的缩放背景并保持图像的宽高比例（图像不会被压缩 */
+  /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size#contain */
+  background-size: cover;
+  /* 无论容器如何变化 图片顶部的位置始终适配 */
+  background-position: top;
+  position: relative;
+  /* x y x y */
+  clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo-box img {
+  height: 35px;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin: auto;
+  /* 指定当元素背面朝向观察者时是否可见 如果有动画抖动的情况 设置hidden 可以有效避免 */
+  backface-visibility: hidden;
+}
+
+.heading-primary-main {
+  font-size: 60px;
+  letter-spacing: 35px;
+  font-weight: 400;
+  animation-name: moveInLeft;
+  /* 动画持续时间 */
+  animation-duration: 1s;
+  /* 动画的延迟时间 */
+  /* animation-delay: 3s; */
+  /* ease-in 动画一开始缓慢 后面随着时间的推移逐步加快 */
+  /* animation-timing-function: ease-in; */
+  /* 与ease-out的情况相反 */
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+  font-size: 20px;
+  letter-spacing: 17px;
+  font-weight: 700;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.text-box {
+  position: absolute;
+  /* left top 与父元素有关 而transform与元素自身有关GO */
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
