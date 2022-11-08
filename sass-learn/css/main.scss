@@ -1,0 +1,4 @@
+@use "variable";
+.use-primary {
+  background: variable.$color;
+}

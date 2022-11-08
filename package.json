@@ -19,7 +19,7 @@
     "url": "https://github.com/Hearpro/learn-notes/issues"
   },
   "homepage": "https://github.com/Hearpro/learn-notes#readme",
-  "dependencies": {
-    "sass": "^1.56.0"
+  "devDependencies": {
+    "dart-sass": "^1.25.0"
   }
 }

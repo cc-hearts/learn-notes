@@ -1,0 +1,33 @@
+
+.heading-primary {
+  color: $primary-white-1;
+  text-transform: uppercase;
+  margin: auto;
+  /* 指定当元素背面朝向观察者时是否可见 如果有动画抖动的情况 设置hidden 可以有效避免 */
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    font-weight: 400;
+    animation-name: moveInLeft;
+    /* 动画持续时间 */
+    animation-duration: 1s;
+    /* 动画的延迟时间 */
+    /* animation-delay: 3s; */
+    /* ease-in 动画一开始缓慢 后面随着时间的推移逐步加快 */
+    /* animation-timing-function: ease-in; */
+    /* 与ease-out的情况相反 */
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    font-size: 2rem;
+    letter-spacing: 1.7rem;
+    font-weight: 700;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}

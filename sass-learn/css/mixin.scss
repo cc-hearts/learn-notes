@@ -1,0 +1,48 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+// 使用的方式
+.float-parent {
+  @include clearfix;
+}
+
+// mixin 使用变量的方式
+
+@mixin style-link-style($color) {
+  color: $color;
+}
+
+.use-style-link-style {
+  @include style-link-style(red);
+}
+
+// 函数的使用方式
+
+@function divide($a, $b) {
+  @return $a / $b;
+}
+
+.use-function {
+  margin: divide(10, 5) * 1px;
+}
+
+// 占位符 extends 的使用
+%link-style {
+  background-color: red;
+  margin: 12px;
+  padding: 16px;
+}
+
+.use-link-style {
+  @extend %link-style;
+  background-color: blue;
+}
+
+.use0-link-sss {
+  @extend %link-style;
+}
