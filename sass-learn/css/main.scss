@@ -2,3 +2,50 @@
 .use-primary {
   background: variable.$color;
 }
+// @see https://github.com/zchen9/code/issues/12
+// @see https://developer.mozilla.org/zh-CN/docs/Web/CSS/@supports
+// @supports 检测是否支持指定的 CSS 属性
+
+// 借助 sass maps 定义 css variables
+$colors: (
+  white-1: #fff,
+  black-1: #000,
+);
+$sizes: (
+  radius-md: 12px,
+  font-md: 14px,
+);
+
+:root {
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+  @each $name, $size in $sizes {
+    --size-#{$name}: #{$size};
+  }
+}
+// 借助 Sass Function 使用 CSS Variables
+@function --color($color-name) {
+  @return var(--color-#{$color-name});
+}
+@function --size($size-name) {
+  @return var(--size-#{$size-name});
+}
+
+.container {
+  color: --color(white-1);
+  background-color: --color(black-1);
+  border-radius: --size(radius-md);
+  font-size: --size(font-md);
+}
+
+// 两种变量计算方法
+// 使用 Sass 中的 #{} 辅助编译成浏览器可识别的 CSS，最终用 CSS 的 calc 计算函数处理
+
+
+// ...
+
+$fixed-block-width: 300px;
+.container {
+  margin-left: calc(#{$fixed-block-width} + #{--size(#{radius-md})});
+}

@@ -1,5 +1,7 @@
 # Sass
 
+> `#{}` SassScript 中的插值始终返回不带引号的字符串。
+
 ## function
 
 ```css

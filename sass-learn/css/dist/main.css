@@ -1,0 +1,23 @@
+.use-primary {
+  background: red;
+}
+
+:root {
+  --color-white-1: #fff;
+  --color-black-1: #000;
+  --size-radius-md: 12px;
+  --size-font-md: 14px;
+}
+
+.container {
+  color: var(--color-white-1);
+  background-color: var(--color-black-1);
+  border-radius: var(--size-radius-md);
+  font-size: var(--size-font-md);
+}
+
+.container {
+  margin-left: calc(300px + var(--size-radius-md));
+}
+
+/*# sourceMappingURL=main.css.map */
