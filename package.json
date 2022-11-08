@@ -1,0 +1,25 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "learn notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hearpro/learn-notes.git"
+  },
+  "keywords": [
+    "scss"
+  ],
+  "author": "heart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hearpro/learn-notes/issues"
+  },
+  "homepage": "https://github.com/Hearpro/learn-notes#readme",
+  "dependencies": {
+    "sass": "^1.56.0"
+  }
+}
