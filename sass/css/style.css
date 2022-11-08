@@ -1,14 +1,25 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 允许用户缩放改变字体的大小配置 */
+  /* 用户可能缩放字体的大小 因此使用百分比字体 */
+  font-size: 62.5%;
   box-sizing: border-box;
 }
+
+/* transform filter 等其他属性会创建新的堆叠上下文 因此z-index可能会失效 */
 
 body {
   /* 一般字体都设置在body下面 */
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 16;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
   padding: 30px;
@@ -33,14 +44,14 @@ body {
   clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
-.logo-box img {
-  height: 35px;
+.header__logo-box img {
+  height: 3.5rem;
 }
 
 .heading-primary {
@@ -49,12 +60,12 @@ body {
   margin: auto;
   /* 指定当元素背面朝向观察者时是否可见 如果有动画抖动的情况 设置hidden 可以有效避免 */
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
-.heading-primary-main {
-  font-size: 60px;
-  letter-spacing: 35px;
+.heading-primary--main {
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
   font-weight: 400;
   animation-name: moveInLeft;
   /* 动画持续时间 */
@@ -67,16 +78,16 @@ body {
   animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
-  font-size: 20px;
-  letter-spacing: 17px;
+.heading-primary--sub {
+  font-size: 2rem;
+  letter-spacing: 1.7rem;
   font-weight: 700;
   animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   /* left top 与父元素有关 而transform与元素自身有关GO */
   left: 50%;
@@ -95,9 +106,9 @@ body {
 .btn:visited {
   /* 如果是行内元素 设置了padding-top padding-bottom 有效果 但是不会影响布局 */
   display: inline-block;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   text-decoration: none;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
 }
 
@@ -122,7 +133,7 @@ body {
   z-index: -1;
   width: 100%;
   height: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   background-color: #fff;
   transition: all 0.3s;
   opacity: 1;
@@ -133,12 +144,12 @@ body {
   opacity: 0;
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInUp 1s ease-out 0.75s;
   /* 设置 CSS 动画在执行之前和之后如何将样式应用于其目标 */
-  animation-fill-mode:backwards;
+  animation-fill-mode: backwards;
 }
