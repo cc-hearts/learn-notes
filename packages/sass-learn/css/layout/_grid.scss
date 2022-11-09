@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+}
+
+$prefix-col: col-1-of;
+@for $i from 1 through 24 {
+  .#{$prefix-col}-#{$i}{
+    flex: #{$i}
+  }
+}

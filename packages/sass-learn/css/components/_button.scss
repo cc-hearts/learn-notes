@@ -59,3 +59,31 @@
     animation-fill-mode: backwards;
   }
 }
+
+.btn-text {
+  transition: all 0.3s;
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $primary-green-1;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $primary-green-1;
+    padding: 5px;
+  }
+
+  &:hover,&:active {
+    border-bottom: 1px solid transparent;
+  }
+
+  &:hover {
+    background-color: $primary-green-1;
+    color: $primary-white-1;
+    transform: translateY(-1px);
+    @include shallow-shadow($primary-green-1);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}

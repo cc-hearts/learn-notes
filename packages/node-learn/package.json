@@ -1,25 +1,24 @@
 {
-  "name": "learn",
+  "name": "@repo/node",
   "version": "1.0.0",
-  "description": "learn notes",
+  "description": "learn node",
   "main": "index.js",
   "scripts": {
-    "scss:compile": "npx sass packages/sass-learn/css/index.scss packages/sass-learn/css/dist/index.css -w",
-    "dev:node": "pnpm --filter @repo/node dev"
+    "dev": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hearpro/learn-notes.git"
   },
   "keywords": [
-    "scss node css"
+    "node"
   ],
   "author": "heart",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Hearpro/learn-notes/issues"
   },
-  "homepage": "https://github.com/Hearpro/learn-notes#readme",
+  "homepage": "https://github.com/Hearpro/learn-notes/node-learn/#readme",
   "devDependencies": {
     "dart-sass": "^1.25.0"
   }

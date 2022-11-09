@@ -1,4 +1,3 @@
-
 .heading-primary {
   color: $primary-white-1;
   text-transform: uppercase;
@@ -29,5 +28,53 @@
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+  }
+}
+
+.section-about {
+  background-color: $primary-white-1;
+  padding: 5rem 0;
+
+  &__content {
+    padding-left: 4rem;
+  }
+}
+
+.heading-subtitle {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: 3px;
+  margin-bottom: 8rem;
+  background-image: linear-gradient(
+    to right,
+    $primary-green-1,
+    $primary-green-2
+  );
+  background-clip: text;
+  // 裁剪背景为文本的形势
+  -webkit-background-clip: text;
+  // 文字的颜色会在裁剪的文本颜色之上 这里设置transparent
+  color: transparent;
+
+  transition: all 0.3s;
+  &:hover {
+    // skewY 沿着y轴倾斜 2deg
+    transform: skewY(2deg) skewX(-15deg) scale(1.2);
+    text-shadow: 0.5rem 0.5rem 1rem $primary-box-shadow-1;
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paragraph {
+  line-height: 1.5;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }
