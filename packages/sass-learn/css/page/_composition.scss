@@ -1,0 +1,39 @@
+.composition {
+  position: relative;
+  &__photo {
+    position: absolute;
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem $primary-box-shadow-1;
+    border-radius: 2px;
+    z-index: 10;
+    transition: all 0.3s;
+    // 轮廓偏移
+    outline-offset: 2rem;
+    &--1 {
+      left: 0;
+      top: -2rem;
+    }
+
+    &--2 {
+      left: 40%;
+      top: 2rem;
+    }
+
+    &--3 {
+      left: 20%;
+      top: 10rem;
+    }
+
+    &:hover {
+      z-index: 20;
+      transform: scale(1.1) translateY(-0.5rem);
+      box-sizing: 0 2.5rem 4rem $primary-box-shadow-2;
+      outline: 0.5rem solid $primary-green-1;
+    }
+  }
+
+  // composition hover 的时候 子元素不在hover范围内的将缩放
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  }
+}
