@@ -1,0 +1,1 @@
+export type call = (...args: any[]) => void;
