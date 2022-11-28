@@ -1,7 +1,6 @@
 {
-  "name": "$name$",
-  "version": "$version$",
-  "dependencies": {
-    $END$
-  }
+  "name": "utils-learn",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {}
 }

@@ -1,0 +1,34 @@
+$prefix: "cc-heart";
+
+:root {
+  --#{$prefix}-white: #fff;
+  --#{$prefix}-white-soft: #f9f9f9;
+  --#{$prefix}-white-mute: #f1f1f1;
+
+  --#{$prefix}-black: #1a1a1a;
+  --#{$prefix}-black-pure: #000000;
+  --#{$prefix}-black-soft: #242424;
+  --#{$prefix}-black-mute: #2f2f2f;
+}
+
+:root {
+  --#{$prefix}-bg: var(--#{$prefix}-white);
+  --#{$prefix}-bg-soft: var(--#{$prefix}-white-soft);
+  --#{$prefix}-bg-alt: var(--#{$prefix}-white-soft);
+
+  --#{$prefix}-color: var(--#{$prefix}-black);
+}
+
+.dark {
+  --#{$prefix}-bg: var(--#{$prefix}-black-soft);
+  --#{$prefix}-bg-soft: var(--#{$prefix}-black-mute);
+  --#{$prefix}-bg-alt: var(--#{$prefix}-black);
+
+  --#{$prefix}-color: var(--#{$prefix}-white);
+}
+
+body {
+  background-color: var(--#{$prefix}-bg);
+  color: var(--#{$prefix}-color);
+  transition: all 0.3s ease;
+}

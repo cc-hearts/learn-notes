@@ -6,7 +6,8 @@
   "scripts": {
     "scss:compile": "npx sass packages/sass-learn/css/index.scss packages/sass-learn/css/dist/index.css -w",
     "dev:node": "pnpm --filter @repo/node dev",
-    "ts:compile": "pnpm --filter @repo/ts compile"
+    "ts:compile": "pnpm --filter @repo/ts compile",
+    "dev:v3": "pnpm --filter @repo/v3-learn dev"
   },
   "repository": {
     "type": "git",

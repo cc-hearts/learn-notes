@@ -6,6 +6,7 @@
  */
 import "reflect-metadata";
 function testDecorator(construct) {
+  // @ts-ignore
   @Reflect.metadata("inClass", construct.name)
   class _con extends construct {}
   return _con;
@@ -16,4 +17,5 @@ class Person {
   name: string;
 }
 
+// @ts-ignore
 console.log(Reflect.getMetadata("inClass", Person));
