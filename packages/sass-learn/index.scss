@@ -1,0 +1,5 @@
+body {
+  background-color: var(--#{$prefix}-bg);
+  color: var(--#{$prefix}-color);
+  transition: all 0.3s ease;
+}

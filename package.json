@@ -26,5 +26,8 @@
     "dart-sass": "^1.25.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "sass": "^1.56.1"
   }
 }

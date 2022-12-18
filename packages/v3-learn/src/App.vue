@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import Button from '@/components/button/button.vue'
+import Button from "@/components/button/button.vue";
+
+function handleClick() {
+  console.log(document.querySelector(":root")?.classList.add("dark"));
+}
 </script>
 
 <template>
-  <Button type="primary">123</Button>
+  <Button type="primary" @click="handleClick">toggle</Button>
 </template>
 
 <style>
-
 button {
   outline: inherit !important;
 }

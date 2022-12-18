@@ -1,0 +1,20 @@
+{
+    "name": "2022-12-7",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "tsc -p ./tsconfig.json && npx nodemon index.js"
+    },
+    "keywords": [],
+    "author": "cc-heart",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@cc-heart/utils": "^1.2.6",
+        "express": "^4.18.2",
+        "express-graphql": "^0.12.0",
+        "graphql": "^16.6.0",
+        "nodemon": "^2.0.20"
+    }
+}

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mock searchName result should generate a new snapshot: [join] 1`] = `
+[
+  "join",
+]
+`;

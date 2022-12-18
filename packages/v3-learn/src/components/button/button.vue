@@ -69,5 +69,5 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
-@import "@/assets/scss/components/_button.scss";
+@import "@/assets/scss/components/button/_button.scss";
 </style>

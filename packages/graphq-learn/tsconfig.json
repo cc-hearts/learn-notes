@@ -1,0 +1,6 @@
+{
+  "extends": "@cc-heart/utils",
+  "compilerOptions": {
+    "emitDeclarationOnly": false
+  }
+}
